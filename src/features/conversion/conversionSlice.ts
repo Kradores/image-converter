@@ -30,7 +30,7 @@ const conversionSlice = createSlice({
     setQuality: (state, action: PayloadAction<number>) => {
       state.quality = action.payload;
     },
-    setCompresionLevel: (state, action: PayloadAction<number>) => {
+    setCompressionLevel: (state, action: PayloadAction<number>) => {
       state.compressionLevel = action.payload;
     },
     setSizes: (state, action: PayloadAction<number[]>) => {
@@ -39,8 +39,8 @@ const conversionSlice = createSlice({
     setLossless: (state, action: PayloadAction<boolean>) => {
       state.lossless = action.payload;
     },
-    setIsProcessing: (state, action: PayloadAction<boolean>) => {
-      state.lossless = action.payload;
+    setProcessing: (state, action: PayloadAction<boolean>) => {
+      state.isProcessing = action.payload;
     },
     setError: (state, action: PayloadAction<string | null>) => {
       state.error = action.payload;
@@ -52,10 +52,10 @@ const conversionSlice = createSlice({
 export const {
   setFiles,
   setQuality,
-  setCompresionLevel,
+  setCompressionLevel,
   setSizes,
   setLossless,
-  setIsProcessing,
+  setProcessing,
   setError,
   resetState,
 } = conversionSlice.actions;
