@@ -3,6 +3,8 @@ import conversionReducer from "@/features/conversion/conversionSlice"
 import { conversionApiSlice } from "@/features/conversion/conversionApi";
 import { listenerMiddleware } from "./listenerMiddleware";
 
+import "@/features/conversion/listeners";
+
 export const store = configureStore({
     reducer: {
         conversion: conversionReducer,
