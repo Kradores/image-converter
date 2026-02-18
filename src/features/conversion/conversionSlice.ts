@@ -1,6 +1,6 @@
 import { type PayloadAction, createSlice } from "@reduxjs/toolkit";
 
-interface ConversionState {
+export interface Conversion {
   files: File[];
   quality: number;
   compressionLevel: number;
@@ -10,7 +10,7 @@ interface ConversionState {
   error: string | null;
 }
 
-const initState: ConversionState = {
+const initState: Conversion = {
   files: [],
   quality: 75,
   compressionLevel: 4,
