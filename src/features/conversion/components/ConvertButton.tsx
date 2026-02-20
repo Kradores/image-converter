@@ -30,8 +30,6 @@ export function ConvertButton({ files }: ConvertButtonProps) {
     formData.append("lossless", String(lossless));
     formData.append("sizes", sizes.join(","));
 
-    dispatch(setError(null));
-
     try {
       await convertImages(formData).unwrap();
       toast.success("Conversion complete");

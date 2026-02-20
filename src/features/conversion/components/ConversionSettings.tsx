@@ -16,7 +16,6 @@ export function ConversionSettings() {
   const handleSizesBlur = useCallback((sizesInput: string) => {
     if (!sizesInput.trim()) {
       dispatch(setSizes([]));
-      dispatch(setError(null));
       return;
     }
 
@@ -30,7 +29,6 @@ export function ConversionSettings() {
       return;
     }
 
-    dispatch(setError(null));
     dispatch(setSizes(parsed));
   }, [dispatch]);
 
