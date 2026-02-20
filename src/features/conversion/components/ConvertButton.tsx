@@ -34,7 +34,6 @@ export function ConvertButton({ files }: ConvertButtonProps) {
 
     try {
       await convertImages(formData).unwrap();
-      // await downloadConvertedImages(formData);
       toast.success("Conversion complete");
     } catch (err: unknown) {
       console.error(err);
@@ -65,19 +64,3 @@ export function ConvertButton({ files }: ConvertButtonProps) {
     </button>
   );
 }
-
-// async function downloadConvertedImages(formData: FormData) {
-//   const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/convert`, {
-//     method: "POST",
-//     body: formData,
-//   })
-
-//   const blob = await response.blob()
-
-//   const url = window.URL.createObjectURL(blob)
-//   const link = document.createElement("a")
-//   link.href = url
-//   link.download = "converted.zip"
-//   link.click()
-//   window.URL.revokeObjectURL(url)
-// }
